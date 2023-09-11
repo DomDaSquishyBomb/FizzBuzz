@@ -12,7 +12,7 @@ class FizzBuzz {
         }
     }
 
-    private static void doFizzBuzz(int i) {
+    public static void doFizzBuzz(int i) {
         // while loop
 
         // Find out which numbers divide i.
