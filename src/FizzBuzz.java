@@ -4,31 +4,38 @@
 class FizzBuzz {
 
     public static void main(String[] args) {
+        int i = 1;
 
-        for (int i = 1; i < 100; i++) {
+        while (i < 100) {
+            doFizzBuzz(i);
+            i++;
+        }
+    }
 
-            // Find out which numbers divide i.
-            boolean divisibleBy3 = i % 3 == 0;
-            boolean divisibleBy5 = i % 5 == 0;
+    private static void doFizzBuzz(int i) {
+        // while loop
 
-            // Print our appropriate result.
-            if (divisibleBy3 && divisibleBy5) {
+        // Find out which numbers divide i.
+        boolean divisibleBy3 = i % 3 == 0;      // = assigns variable but also function?
+        boolean divisibleBy5 = i % 5 == 0;
 
-                System.out.println("Fizz Buzz");
+        // Print our appropriate result.
+        if (divisibleBy3 && divisibleBy5) {
 
-            } else if (divisibleBy3) {
+            System.out.println("Fizz Buzz");
 
-                System.out.println("Fizz");
+        } else if (divisibleBy3) {   // else if seems to be similar to python
 
-            } else if (divisibleBy5) {
+            System.out.println("Fizz");
 
-                System.out.println("Buzz");
+        } else if (divisibleBy5) {
 
-            } else {
+            System.out.println("Buzz"); // quotation for strings but no need to define
 
-                System.out.println(i);
+        } else {
 
-            }
+            System.out.println(i);  //print to output
+
         }
     }
 }
